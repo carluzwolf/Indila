@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>INDILA WORLD</title>
+<meta name="description" content="Independent fan portal about Indila: news, music history and verified facts.">
+<meta property="og:title" content="INDILA WORLD"><meta property="og:type" content="website">
+<style>
+:root{--ink:#0a0a0a;--g8:#2a2a2a;--g6:#5c5c5c;--g4:#9a9a9a;--line:#e4e4e4;--soft:#f4f4f4;--bg:#fff;
+--serif:Georgia,"Times New Roman",serif;--sans:Inter,"Helvetica Neue",Arial,system-ui,sans-serif;--w:1200px}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font:16px/1.6 var(--sans);-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}button{font:inherit;cursor:pointer;color:inherit}
+.wrap{max-width:var(--w);margin:0 auto;padding:0 20px}
+svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;flex:none}
+:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+/* top bar */
+.top{background:var(--ink);color:#fff;font-size:13px}
+.top .wrap{display:flex;justify-content:space-between;align-items:center;height:38px;gap:12px}
+.top span{color:#cfcfcf;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.lang{display:flex;align-items:center;gap:6px}
+.lang select{background:transparent;color:#fff;border:1px solid #555;border-radius:4px;padding:3px 6px;font-size:13px}
+.lang option{color:#000}
+/* masthead */
+.mast{padding:26px 0 18px;text-align:center;border-bottom:1px solid var(--line)}
+.logo{font:400 clamp(30px,6vw,52px)/1 var(--serif);letter-spacing:.2em;padding-left:.2em}
+.slogan{margin-top:8px;font-size:13px;color:var(--g6);letter-spacing:.04em}
+nav.main{position:sticky;top:0;z-index:20;background:#fff;border-bottom:2px solid var(--ink)}
+nav.main .wrap{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none}
+nav.main::-webkit-scrollbar,nav.main .wrap::-webkit-scrollbar{display:none}
+nav.main button,nav.main a{padding:14px 14px;font-size:14px;font-weight:600;color:var(--g8);white-space:nowrap;border:0;background:none;border-bottom:3px solid transparent;margin-bottom:-2px}
+nav.main button:hover,nav.main a:hover{color:var(--ink);border-bottom-color:var(--g4)}
+nav.main .on{border-bottom-color:var(--ink);color:var(--ink)}
+.sp{flex:1}
+/* hero */
+main{padding:28px 0 56px}
+.hero{display:grid;grid-template-columns:1.7fr 1fr;gap:28px;padding-bottom:32px;border-bottom:1px solid var(--line)}
+.feat{display:block;position:relative;border-radius:6px;overflow:hidden;min-height:440px;color:#fff;background:var(--g8)}
+.feat .cv{position:absolute;inset:0}
+.feat .tx{position:absolute;left:0;right:0;bottom:0;padding:90px 28px 28px;background:linear-gradient(transparent,#000d)}
+.feat h2{font:400 clamp(26px,4vw,42px)/1.12 var(--serif);margin:10px 0 8px}
+.feat p{color:#e2e2e2;max-width:56ch}
+.feat:hover h2{text-decoration:underline;text-underline-offset:5px;text-decoration-thickness:1px}
+.cat{display:inline-block;font-size:12px;font-weight:700;padding:3px 9px;border-radius:3px;background:#fff;color:var(--ink)}
+.row .cat,.art .cat{background:var(--ink);color:#fff}
+.side{display:flex;flex-direction:column}
+.side h3.sec{margin-bottom:6px}
+.row{display:grid;grid-template-columns:1fr 104px;gap:14px;padding:14px 0;border-bottom:1px solid var(--line)}
+.row:last-child{border:0}
+.row h3{font:400 19px/1.25 var(--serif);margin:6px 0 4px}
+.row:hover h3{text-decoration:underline;text-underline-offset:3px}
+.row p{font-size:14px;color:var(--g6)}
+.meta{font-size:12px;color:var(--g4);display:flex;gap:6px;align-items:center;margin-top:6px}
+.th{aspect-ratio:1;border-radius:4px;position:relative;overflow:hidden}
+.cv{display:flex;align-items:flex-end;justify-content:flex-start;overflow:hidden}
+.cv b{font:400 220px/.8 var(--serif);color:#ffffff1f;position:absolute;right:-10px;bottom:-14px}
+.th b{font-size:90px;right:-4px;bottom:-8px}
+/* sections */
+.sec{font:700 20px/1.2 var(--sans);padding-top:4px;border-top:4px solid var(--ink);padding-bottom:14px;display:flex;justify-content:space-between;align-items:center;padding-top:10px}
+.sec a{font-size:13px;font-weight:500;color:var(--g6);display:flex;gap:4px;align-items:center}
+.layout{display:grid;grid-template-columns:1fr 330px;gap:40px;margin-top:36px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.card .th{aspect-ratio:16/10;margin-bottom:12px}
+.card .th b{font-size:150px}
+.card h3{font:400 20px/1.25 var(--serif);margin:8px 0 4px}
+.card:hover h3{text-decoration:underline;text-underline-offset:3px}
+.card p{font-size:14px;color:var(--g6)}
+.card .cat{background:var(--ink);color:#fff}
+.box{border:1px solid var(--line);border-radius:6px;padding:20px;margin-bottom:28px;box-shadow:0 1px 6px #0000000a}
+.songs a{display:flex;justify-content:space-between;align-items:center;padding:11px 0;border-bottom:1px solid var(--line);font-family:var(--serif);font-size:18px}
+.songs a:last-child{border:0}.songs a:hover{padding-left:6px}.songs{transition:none}
+.songs a{transition:padding .2s}
+.nl{background:var(--ink);color:#fff;border-radius:6px;padding:24px}
+.nl h3{font:400 24px/1.2 var(--serif);margin-bottom:8px}.nl p{font-size:14px;color:#cfcfcf;margin-bottom:14px}
+.nl form{display:flex;gap:8px}
+.nl input{flex:1;min-width:0;padding:10px;border-radius:4px;border:0;font:inherit}
+.nl button{background:#fff;color:#000;border:0;border-radius:4px;padding:0 14px;font-weight:700}
+.nl small{display:block;margin-top:10px;color:#9a9a9a;font-size:12px}
+.empty{padding:56px 24px;text-align:center;background:var(--soft);border-radius:6px;color:var(--g6)}
+.empty svg{width:34px;height:34px;margin-bottom:10px}
+.cta{display:inline-flex;gap:8px;align-items:center;margin-top:12px;border:1px solid var(--ink);border-radius:4px;padding:9px 16px;font-weight:600;font-size:14px;background:#fff}
+.cta:hover{background:var(--ink);color:#fff}
+/* article */
+.art{max-width:740px;margin:0 auto}
+.art .back{display:inline-flex;gap:6px;align-items:center;font-size:14px;color:var(--g6);margin-bottom:22px}
+.art h1{font:400 clamp(32px,5.5vw,52px)/1.1 var(--serif);margin:14px 0 12px}
+.art .sub{font:italic 400 21px/1.45 var(--serif);color:var(--g8);margin-bottom:18px}
+.art .bar{display:flex;gap:12px;justify-content:space-between;align-items:center;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:12px 0;margin-bottom:26px;font-size:13px;color:var(--g6);flex-wrap:wrap}
+.art .cv{aspect-ratio:16/8;border-radius:6px;margin-bottom:28px;position:relative}
+.art .body p{font:400 19px/1.75 var(--serif);margin-bottom:1.2em}
+.art .body p:first-child::first-letter{font-size:3.4em;float:left;line-height:.85;padding:6px 10px 0 0}
+.refs{margin-top:34px;padding:20px;background:var(--soft);border-radius:6px}
+.refs h2{font-size:16px;margin-bottom:8px}.refs a{display:flex;gap:8px;align-items:center;padding:5px 0;font-size:15px;text-decoration:underline;text-underline-offset:3px}
+.btn{border:1px solid var(--line);background:#fff;border-radius:4px;padding:6px 12px;display:inline-flex;gap:6px;align-items:center;font-size:13px}.btn:hover{border-color:var(--ink)}
+.rel{max-width:var(--w);margin:56px auto 0}
+.page{max-width:760px;margin:0 auto}.page h1{font:400 42px/1.1 var(--serif);margin-bottom:18px}.page p{font:19px/1.75 var(--serif);margin-bottom:1em}
+.songgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:20px}
+.songgrid .th{aspect-ratio:1;margin-bottom:10px}.songgrid h3{font:400 20px var(--serif)}
+.songgrid .th b{font-size:200px}
+footer{background:var(--ink);color:#cfcfcf;padding:44px 0 28px;font-size:14px}
+.fg{display:grid;grid-template-columns:2fr 1fr 1fr;gap:32px;padding-bottom:28px;border-bottom:1px solid #333}
+footer h4{color:#fff;font-size:14px;margin-bottom:10px}footer li{list-style:none;padding:3px 0}
+footer .lg{font:400 26px var(--serif);letter-spacing:.18em;color:#fff;margin-bottom:10px}
+footer .cp{padding-top:20px;font-size:12px;color:#8a8a8a}
+@media(max-width:960px){.hero{grid-template-columns:1fr}.layout{grid-template-columns:1fr}.grid{grid-template-columns:1fr 1fr}.feat{min-height:360px}}
+@media(max-width:600px){.grid{grid-template-columns:1fr}.fg{grid-template-columns:1fr}.top .tg{display:none}.feat .tx{padding:70px 18px 18px}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style></head>
+<body>
+<div class="top"><div class="wrap"><span id="date"></span><span class="tg" data-i="indep"></span>
+<label class="lang"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg><select id="lang" aria-label="Language"><option value="pt">Português</option><option value="en">English</option><option value="es">Español</option><option value="fr">Français</option></select></label></div></div>
+<header class="mast"><a class="logo" href="#/">INDILA WORLD</a><p class="slogan" data-i="tagline"></p></header>
+<nav class="main"><div class="wrap" id="nav"></div></nav>
+<main><div class="wrap" id="app"></div></main>
+<footer><div class="wrap"><div class="fg"><div><div class="lg">INDILA WORLD</div><p data-i="disclaimer"></p></div>
+<div><h4 data-i="explore"></h4><ul><li><a href="#/" data-i="news"></a></li><li><a href="#/music" data-i="music"></a></li><li><a href="#/about" data-i="about"></a></li></ul></div>
+<div><h4 data-i="transp"></h4><p data-i="transpTxt"></p></div></div><div class="cp">© <span id="yr"></span> INDILA WORLD</div></div></footer>
+<script>
+const T={
+en:{news:"News",music:"Music",about:"About",all:"All",tagline:"One artist. A thousand emotions.",indep:"Independent fan portal",latest:"Latest",more:"More stories",empty:"The first stories are on their way",emptyTxt:"The editorial desk publishes here automatically. Meanwhile, explore her music.",explore:"Explore",transp:"Transparency",transpTxt:"Content is written with AI from public sources, labelled by type and linked to its references. Rumors are never presented as facts.",disclaimer:"INDILA WORLD is an independent fan project. It has no affiliation with Indila, her label or her team.",sources:"Sources & references",back:"Back",share:"Share",copied:"Link copied",aboutTxt:"INDILA WORLD is an independent fan portal about the French singer Indila. Articles are produced with AI assistance from public sources, labelled by type (News, Editorial, Retrospective, Music history, Facts, Unconfirmed) and always link to their references. This site is not official.",disc:"Songs",songs:"Songs",nlT:"Get new stories by email",nlP:"A short digest when something worth reading is published.",nlB:"Subscribe",nlS:"Coming soon: newsletter is not active yet.",email:"Your email",related:"Related stories",watch:"Watch on YouTube",type:{NEWS:"News",EDITORIAL:"Editorial",RETROSPECTIVE:"Retrospective",MUSIC_HISTORY:"Music history",FACTS:"Facts",RUMORS:"Unconfirmed"}},
+pt:{news:"Notícias",music:"Música",about:"Sobre",all:"Tudo",tagline:"Uma artista. Mil emoções.",indep:"Portal independente de fãs",latest:"Últimas",more:"Mais matérias",empty:"As primeiras matérias estão a caminho",emptyTxt:"A redação publica aqui automaticamente. Enquanto isso, explore a música dela.",explore:"Explorar",transp:"Transparência",transpTxt:"O conteúdo é escrito com IA a partir de fontes públicas, classificado por tipo e ligado às suas referências. Rumores nunca são apresentados como fatos.",disclaimer:"INDILA WORLD é um projeto independente de fãs, sem vínculo com Indila, sua gravadora ou sua equipe.",sources:"Fontes e referências",back:"Voltar",share:"Compartilhar",copied:"Link copiado",aboutTxt:"INDILA WORLD é um portal independente de fãs da cantora francesa Indila. As matérias são produzidas com apoio de IA a partir de fontes públicas, classificadas por tipo (Notícia, Editorial, Retrospectiva, História musical, Curiosidades, Não confirmado) e sempre apontam suas referências. Este site não é oficial.",disc:"Músicas",songs:"Músicas",nlT:"Receba novas matérias por e-mail",nlP:"Um resumo curto quando houver algo que vale a leitura.",nlB:"Assinar",nlS:"Em breve: a newsletter ainda não está ativa.",email:"Seu e-mail",related:"Matérias relacionadas",watch:"Assistir no YouTube",type:{NEWS:"Notícia",EDITORIAL:"Editorial",RETROSPECTIVE:"Retrospectiva",MUSIC_HISTORY:"História musical",FACTS:"Curiosidades",RUMORS:"Não confirmado"}},
+es:{news:"Noticias",music:"Música",about:"Acerca de",all:"Todo",tagline:"Una artista. Mil emociones.",indep:"Portal independiente de fans",latest:"Últimas",more:"Más noticias",empty:"Las primeras historias están en camino",emptyTxt:"La redacción publica aquí de forma automática. Mientras tanto, explora su música.",explore:"Explorar",transp:"Transparencia",transpTxt:"El contenido se escribe con IA a partir de fuentes públicas, clasificado por tipo y enlazado a sus referencias. Los rumores nunca se presentan como hechos.",disclaimer:"INDILA WORLD es un proyecto independiente de fans, sin vínculo con Indila, su sello ni su equipo.",sources:"Fuentes y referencias",back:"Volver",share:"Compartir",copied:"Enlace copiado",aboutTxt:"INDILA WORLD es un portal independiente de fans de la cantante francesa Indila. Los artículos se producen con ayuda de IA a partir de fuentes públicas, clasificados por tipo y siempre enlazan sus referencias. Este sitio no es oficial.",disc:"Canciones",songs:"Canciones",nlT:"Recibe nuevas historias por correo",nlP:"Un resumen breve cuando haya algo que valga la pena leer.",nlB:"Suscribirme",nlS:"Próximamente: la newsletter aún no está activa.",email:"Tu correo",related:"Historias relacionadas",watch:"Ver en YouTube",type:{NEWS:"Noticia",EDITORIAL:"Editorial",RETROSPECTIVE:"Retrospectiva",MUSIC_HISTORY:"Historia musical",FACTS:"Curiosidades",RUMORS:"No confirmado"}},
+fr:{news:"Actualités",music:"Musique",about:"À propos",all:"Tout",tagline:"Une artiste. Mille émotions.",indep:"Portail indépendant de fans",latest:"Dernières",more:"Plus d’articles",empty:"Les premiers articles arrivent bientôt",emptyTxt:"La rédaction publie ici automatiquement. En attendant, explorez sa musique.",explore:"Explorer",transp:"Transparence",transpTxt:"Le contenu est rédigé avec l’IA à partir de sources publiques, classé par type et lié à ses références. Les rumeurs ne sont jamais présentées comme des faits.",disclaimer:"INDILA WORLD est un projet indépendant de fans, sans lien avec Indila, sa maison de disques ou son équipe.",sources:"Sources et références",back:"Retour",share:"Partager",copied:"Lien copié",aboutTxt:"INDILA WORLD est un portail indépendant de fans de la chanteuse française Indila. Les articles sont produits avec l’aide de l’IA à partir de sources publiques, classés par type et renvoient toujours à leurs références. Ce site n’est pas officiel.",disc:"Titres",songs:"Titres",nlT:"Recevez les nouveaux articles par e-mail",nlP:"Un court récapitulatif quand un contenu mérite d’être lu.",nlB:"S’abonner",nlS:"Bientôt : la newsletter n’est pas encore active.",email:"Votre e-mail",related:"Articles liés",watch:"Regarder sur YouTube",type:{NEWS:"Actualité",EDITORIAL:"Éditorial",RETROSPECTIVE:"Rétrospective",MUSIC_HISTORY:"Histoire musicale",FACTS:"Faits",RUMORS:"Non confirmé"}}};
+const SONGS=["Dernière Danse","Tourner Dans Le Vide","Love Story","S.O.S","Ainsi Bas La Vida","Run Run","Parle à Ta Tête","Ego","Mini World","Feuille d'Automne"];
+const I={arr:'<svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>',back:'<svg viewBox="0 0 24 24"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>',share:'<svg viewBox="0 0 24 24"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 10.5l6.8-4M8.6 13.5l6.8 4"/></svg>',link:'<svg viewBox="0 0 24 24"><path d="M10 14a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-1 1M14 10a5 5 0 0 0-7 0l-3 3a5 5 0 0 0 7 7l1-1"/></svg>',note:'<svg viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>',play:'<svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M10 9l5 3-5 3z"/></svg>',news:'<svg viewBox="0 0 24 24"><path d="M4 5h13v14H6a2 2 0 0 1-2-2zM17 9h3v8a2 2 0 0 1-2 2M8 9h5M8 13h5"/></svg>'};
+const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const $=id=>document.getElementById(id);
+let lang=(()=>{try{const s=localStorage.getItem("lang");if(s&&T[s])return s}catch(e){}for(const l of navigator.languages||[navigator.language||"en"]){const c=l.slice(0,2).toLowerCase();if(T[c])return c}return"en"})();
+let filter="ALL",LIST=[];
+const hash=s=>{let h=0;for(const c of s)h=(h*31+c.charCodeAt(0))>>>0;return h};
+const cover=(a,cls="")=>{const h=hash(a.id),g=18+h%22,g2=g+26+h%14;return`<div class="cv ${cls}" style="background:linear-gradient(${(h%140)+20}deg,hsl(0 0% ${g}%),hsl(0 0% ${g2}%))" role="img" aria-label=""><b aria-hidden="true">${esc((a.i18n[lang]||a.i18n.en).title.charAt(0))}</b></div>`};
+const V=a=>a.i18n[lang]||a.i18n.en;
+const fmt=d=>{try{return new Date(d).toLocaleDateString(lang,{day:"numeric",month:"short",year:"numeric"})}catch(e){return d}};
+const tp=(t,a)=>T[lang].type[a.type]||a.type;
+async function load(){try{const r=await fetch("data/index.json");LIST=r.ok?await r.json():[]}catch(e){LIST=[]}}
+function setNav(){const t=T[lang],cats=["ALL",...new Set(LIST.map(a=>a.type))];
+ $("nav").innerHTML=cats.map(c=>`<button data-c="${c}" class="${filter===c&&!location.hash.slice(2)?"on":""}">${c==="ALL"?t.all:t.type[c]||c}</button>`).join("")+`<span class="sp"></span><a href="#/music" class="${location.hash==="#/music"?"on":""}">${t.music}</a><a href="#/about" class="${location.hash==="#/about"?"on":""}">${t.about}</a>`;
+ $("nav").querySelectorAll("button").forEach(b=>b.onclick=()=>{filter=b.dataset.c;if(location.hash.length>2)location.hash="#/";else render()})}
+const row=a=>`<a class="row" href="#/news/${esc(a.id)}"><div><span class="cat">${esc(tp(a.type,a))}</span><h3>${esc(V(a).title)}</h3><p>${esc(V(a).subtitle)}</p><div class="meta">${fmt(a.published)}</div></div><div class="th">${cover(a,"")}</div></a>`;
+const card=a=>`<a class="card" href="#/news/${esc(a.id)}"><div class="th">${cover(a)}</div><span class="cat">${esc(tp(a.type,a))}</span><h3>${esc(V(a).title)}</h3><p>${esc(V(a).subtitle)}</p><div class="meta">${fmt(a.published)}</div></a>`;
+const songsBox=t=>`<div class="box"><div class="sec" style="border-top-color:var(--ink);padding-top:0">${t.disc}<a href="#/music">${t.more||""}${I.arr}</a></div><div class="songs">${SONGS.slice(0,6).map(s=>`<a href="https://www.youtube.com/results?search_query=${encodeURIComponent("Indila "+s)}" target="_blank" rel="noopener"><span>${esc(s)}</span>${I.play}</a>`).join("")}</div></div>`;
+const nl=t=>`<div class="nl"><h3>${t.nlT}</h3><p>${t.nlP}</p><form onsubmit="return false"><input type="email" placeholder="${t.email}" aria-label="${t.email}" disabled><button disabled>${t.nlB}</button></form><small>${t.nlS}</small></div>`;
+async function render(){
+ const t=T[lang];document.documentElement.lang=lang;$("lang").value=lang;
+ document.querySelectorAll("[data-i]").forEach(e=>e.textContent=t[e.dataset.i]);
+ $("date").textContent=new Date().toLocaleDateString(lang,{weekday:"long",day:"numeric",month:"long",year:"numeric"});
+ $("yr").textContent=new Date().getFullYear();
+ setNav();const h=location.hash.replace("#/",""),app=$("app");scrollTo(0,0);
+ if(h.startsWith("news/")){
+  const id=decodeURIComponent(h.slice(5));let a=null;
+  try{const r=await fetch(`data/news/${encodeURIComponent(id)}.json`);if(r.ok)a=await r.json()}catch(e){}
+  if(!a){app.innerHTML=`<div class="art"><a class="back" href="#/">${I.back}${t.back}</a></div>`;return}
+  const v=V(a);document.title=v.title+" — INDILA WORLD";
+  const rel=LIST.filter(x=>x.id!==a.id).slice(0,3);
+  app.innerHTML=`<article class="art"><a class="back" href="#/">${I.back}${t.back}</a><span class="cat">${esc(tp(a.type,a))}</span><h1>${esc(v.title)}</h1><p class="sub">${esc(v.subtitle)}</p>
+  <div class="bar"><span>INDILA WORLD · ${fmt(a.published)}</span><button class="btn" id="sh">${I.share}${t.share}</button></div>${cover(a)}
+  <div class="body">${v.body.split(/\n\s*\n/).map(p=>`<p>${esc(p)}</p>`).join("")}</div>
+  ${(a.sources||[]).length?`<div class="refs"><h2>${t.sources}</h2>${a.sources.map(s=>`<a href="${esc(s.url)}" target="_blank" rel="noopener nofollow">${I.link}${esc(s.name||s.url)}</a>`).join("")}</div>`:""}</article>
+  ${rel.length?`<section class="rel"><div class="sec">${t.related}</div><div class="grid">${rel.map(card).join("")}</div></section>`:""}`;
+  $("sh").onclick=async()=>{const u=location.href;try{if(navigator.share)await navigator.share({title:v.title,url:u});else{await navigator.clipboard.writeText(u);$("sh").lastChild.textContent=t.copied}}catch(e){}};return}
+ document.title="INDILA WORLD";
+ if(h==="music"){app.innerHTML=`<div class="sec">${t.songs}</div><div class="songgrid">${SONGS.map(s=>{const a={id:s,i18n:{en:{title:s}}};return`<a href="https://www.youtube.com/results?search_query=${encodeURIComponent("Indila "+s)}" target="_blank" rel="noopener"><div class="th">${cover(a)}</div><h3>${esc(s)}</h3><div class="meta">${I.play}${t.watch}</div></a>`}).join("")}</div>`;return}
+ if(h==="about"){app.innerHTML=`<div class="page"><h1>${t.about}</h1><p>${t.aboutTxt}</p><p>${t.disclaimer}</p></div>`;return}
+ const L=filter==="ALL"?LIST:LIST.filter(a=>a.type===filter);
+ if(!L.length){app.innerHTML=`<div class="layout"><div><div class="empty">${I.news}<h2 style="font:400 26px var(--serif);color:var(--ink)">${t.empty}</h2><p>${t.emptyTxt}</p><a class="cta" href="#/music">${t.music}${I.arr}</a></div></div><aside>${songsBox(t)}${nl(t)}</aside></div>`;return}
+ const [f,...rest]=L,side=rest.slice(0,3),more=rest.slice(3);
+ app.innerHTML=`<section class="hero"><a class="feat" href="#/news/${esc(f.id)}">${cover(f).replace('class="cv ','class="cv ')}<div class="tx"><span class="cat">${esc(tp(f.type,f))}</span><h2>${esc(V(f).title)}</h2><p>${esc(V(f).subtitle)}</p></div></a>
+ <div class="side"><div class="sec">${t.latest}</div>${side.map(row).join("")}</div></section>
+ <div class="layout"><div>${more.length?`<div class="sec">${t.more}</div><div class="grid" style="grid-template-columns:repeat(2,1fr)">${more.map(card).join("")}</div>`:""}</div><aside>${songsBox(t)}${nl(t)}</aside></div>`;
+}
+$("lang").onchange=e=>{lang=e.target.value;try{localStorage.setItem("lang",lang)}catch(_){}render()};
+addEventListener("hashchange",render);load().then(render);
+</script></body></html>
