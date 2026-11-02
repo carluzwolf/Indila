@@ -1,0 +1,1 @@
+{"max_gemini_calls_per_run":6,"max_articles_per_day":4,"model":"gemini-2.5-flash","autopublish_types":["EDITORIAL","MUSIC_HISTORY","FACTS","RETROSPECTIVE"],"review_types":["NEWS","RUMORS"]}
